@@ -92,16 +92,28 @@ the data for each node? Where is the head? Where is the tail? (Be as specific as
 possible --- exactly which parts of the diagram correspond to each part? Arrows?
 Boxes? Text?)
 
+Node: a box with attributes(data and next) and a pointer 
+eg    |"apple"|next| --> 
+The data for each of the 3 nodes are: "apple", "berry," "cherry"
+The head attribute of the entire list points to the first node containing "apple"
+The tail is the last existing node, so "cherry"
+
 2. What's the difference between doubly- and singly-linked lists?
+Singly linked lists are one directional; they have a next attribute or a pointer.
+Doubly linked lists are bidirectional; they keep track of the next and previous nodes- two pointers.
 
 3. Why is it faster to append to a linked list if we keep track of the `tail`
 as an attribute?
+We don't have to loop through the list to find the last node. We keep track of the last node as an attribute for the whole list.
+ANSWER: changes runtime from O(n) to O(1)!
 
 Trees
 -----
 
 1. What would be the best data structure to use for keeping track of nodes to
 	visit during a Breadth First Search of a tree?
+  --> Queue
 
 2. What would be the best data structure to use for keeping track of nodes to
 	visit during a Depth First Search of a tree?
+  --> Stack
