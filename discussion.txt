@@ -6,6 +6,8 @@ to consider the length of time it takes for the algorithm to run as the algorith
 workload approaches infinity. What determines the **workload** of figuring out
 whether your box of animal crackers contains an elephant?
 
+O(n) --> you must look at every cracker in the box once to determine whether it is an alephant
+
 
 2. Order the following runtimes in descending order of efficiency (that is,
 	fastest runtimes first, slowest last) as `n` approaches infinity:
@@ -22,18 +24,40 @@ whether your box of animal crackers contains an elephant?
 
    - O(1)
 
+fastest <--------------------------------> slowest
+  O(1)  O(log n)  O(n)  O(n logn)  O(n^2)  O(2^n)
+
 
 In the file called `runtime.py`, there are 5 functions.
 
-1. What is the runtime for `string_compare`?
+1. What is the runtime for `string_compare`? 
+  len --> O(1)?     (does it twice, so O(2))
+  for --> O(n)      (runs through every item in list)
+  if in --> O(n)?   (runs through every item once since array?)  
+  total: O(2n) --> O(n)
 
 2. What is the runtime for `has_exotic_animals`?
+  if in --> O(n)?    (does twice, so O(2n)- doesn't check both at same time)
+  total: O(n)
 
 3. What is the runtime for `sum_zero_1`?
+  set conversion --> O(n)   (goes through once)
+  for --> O(n) for loop x 
+  conditional --> O(1)      (fast lookup for sets)
+  total: O(2n) --> O(n)
 
 4. What is the runtime for `sum_zero_2`?
+  for --> O(n)  
+  nested for --> O(n) 
+  checking equality --> O(1)
+  total: O(n^2) "quadratic"
 
 5. What is the runtime for `sum_zero_3`?
+  for --> O(n)  
+  nested for --> O(n) 
+  checking equality, in x2 --> O(3n)?   (check list twice)
+  total: O(n^2)
+  ANSWER: O(n^3) --> where is 3rd power coming from??
 
 
 Stacks and Queues
@@ -43,15 +67,21 @@ Stacks and Queues
 	structure?
 
   - The process of loading and unloading pallets onto a flatbed truck
+    --> stack
 
   - Putting bottle caps on bottles of beer as they roll down an assembly line
+    --> queue
 
 
 2. Describe two more situations where a queue would be an appropriate data
 	structure.
+  --> waiting in line at the gorcery store, dealing with support tickets
+  ANSWER: completing orders in a restaurant
 
 3. Describe two more situations where a stack would be an appropriate data
 	structure.
+  --> taking eating pancakes off the top of a pile, double parking
+  ANSWER: eating pringles!!
 
 
 Linked Lists
