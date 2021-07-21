@@ -75,10 +75,9 @@ class Stack(object):
             >>> s.length()
             3
         """
+        # can we use len method? or loop through and count?
+        return len(self._list)
 
-        # FIXME
-
-        pass
         
     def empty(self):
         """Empty stack::
@@ -97,9 +96,8 @@ class Stack(object):
             0
         """
 
-        # FIXME
-
-        pass
+        # can we make new stack that's empty? or pop all items?
+        self._list = []
 
     def is_empty(self):
         """Is stack empty?
@@ -117,9 +115,8 @@ class Stack(object):
             False
         """
 
-        # FIXME
-
-        pass
+        return len(self._list) == 0
+        # from answers: return not self._list
 
 if __name__ == "__main__":
     import doctest
